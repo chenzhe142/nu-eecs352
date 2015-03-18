@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"> 
+
+    <title>EECS352 - AutoTuner</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </head>
+  
+  <body>
+    <div class="container">
+
+      <div class="jumbotron">
+        <h1>AutoTuner</h1>
+        <p>
+          EECS 352 - Machine Perception of Music and Audio, Northwestern University<br>
+          Team member: <a href="mailto:zhechen2014@u.northwestern.edu">Zhe Chen</a>, <a href="mailto:chenxingwu2014@u.northwestern.edu">Chenxing Wu</a>, <a href="mailto:maxinchen2014@u.northwestern.edu">Maxin Chen</a>
+
+        </p> 
+        <a href="#Introduction" class="btn btn-success btn-xs" role="button">Introduction</a>
+        <a href="#RelatedWorks" class="btn btn-success btn-xs" role="button">Related Works</a>
+        <a href="#Example" class="btn btn-success btn-xs" role="button">Example</a>
+        <a href="#Method" class="btn btn-success btn-xs" role="button">Method</a>
+        <a href="#References" class="btn btn-success btn-xs" role="button">References</a>
+        
+        <br>
+        <br>
+        <button type="button" class="btn btn-info">Get source code</button>
+      </div>
+
+      <div class="jumbotron" id="Introduction">
+        <h2>Introduction</h2>
+        <p>
+          AutoTuner is a program that can tune human voice to sing a simple melody. It is built in MATLAB.
+        </p>
+        <p>
+          We use following audio processing methods to to achieve this function:
+          <br>
+          - Pitch tracking: analyze input human voice and melody, obtaining their time and frequency information.
+          <br>
+          - Beat tracking: detect onset and match voice with input melody.
+          <br>
+          - Phase vocoder: shift pitch.
+        </p>
+      </div>
+      
+      <div class="jumbotron" id="RelatedWorks">
+        <h2>Related Works</h2>
+      </div>
+
+      <div class="jumbotron" id="Example">
+        <h2>Example</h2>
+        <p>
+          Here is an example to show the audio processing procedure of AutoTuner.<br>
+          Human voice input. Click to play sound.<br>
+          Melody. Click to play sound.<br>
+          Output of AutoTuner. Click to play sound.<br>
+        </p>
+      </div>
+
+      <div class="jumbotron" id="Method">
+        <h2>Method</h2>
+      </div>
+
+      <div class="jumbotron" id="References">
+        <h2>References</h2>
+      </div>
+      
+    </div>
+  	
+  </body>
+
+  <footer>
+    <div class="container">
+      <p class="text-center">&copy; 2015 Built by Zhe Chen</p>
+    </div>
+  </footer>
+
+</html>
