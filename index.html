@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"> 
 
-    <title>EECS352 - AutoTuner</title>
+    <title>EECS352 - Tune Helper</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -17,18 +17,23 @@
     <div class="container">
 
       <div class="jumbotron">
-        <h1>AutoTuner</h1>
+        <h1>Tune Helper</h1>
+
         <p>
-          EECS 352 - Machine Perception of Music and Audio, Northwestern University<br>
-          Instructor: Prof. Bryan Pardo <br>
+          Final Project of EECS 352，2015 Winter Quarter. <br>
           <br>
+          EECS 352 - Machine Perception of Music and Audio, Northwestern University<br>
+          Course website: <a href="http://www.cs.northwestern.edu/~pardo/courses/eecs352/">http://www.cs.northwestern.edu/~pardo/courses/eecs352/</a><br>
+          Instructor: Prof.<a href="http://www.cs.northwestern.edu/~pardo/">Bryan Pardo</a><br>
+          <br>
+          Team name: Voice Thingy<br>
           Team member: <a href="mailto:zhechen2014@u.northwestern.edu">Zhe Chen</a>, <a href="mailto:chenxingwu2014@u.northwestern.edu">Chenxing Wu</a>, <a href="mailto:maxinchen2014@u.northwestern.edu">Maxin Chen</a>
           <br>
           Contact Email: <a href="mailto:chenxingwu2014@u.northwestern.edu">chenxingwu2014@u.northwestern.edu</a>
 
         </p> 
         <br>
-        <a href="#About" class="btn btn-success btn-xs" role="button">About AutoTuner</a>
+        <a href="#About" class="btn btn-success btn-xs" role="button">About</a>
         <a href="#RelatedWorks" class="btn btn-success btn-xs" role="button">Related Works</a>
         <a href="#Example" class="btn btn-success btn-xs" role="button">Example</a>
         <a href="#Method" class="btn btn-success btn-xs" role="button">Method</a>
@@ -40,37 +45,70 @@
       </div>
 
       <div class="jumbotron" id="About">
-        <h2>About AutoTuner</h2>
+        <h2>About Tune Helper</h2>
         <p>
-          AutoTuner is a program that can tune human voice to sing a simple melody. It is built in MATLAB.
+          Tune Helper is a program that can tune human voice to sing a simple melody, or create perfectly tuned vocals.<br>
+          It is written and built in MATLAB.<br>
+          
         </p>
+
         <p>
-          We use following audio processing methods to to achieve this function:
+          Our final project Tune Helper is inspired by music software Auto-Tune, which can auto correlate vocals, creating a very cool electronic vocal effect. 
+        </p>
+
+        <p>
+          We want to implement the basic function of Auto-Tune on MATLAB by ourselves, and we also want to create an interesting function, which uses human speech and a simple melody as input, after the audio processing procedure, combining human speech with melody, producing an audio which is a tuned human speech that its pitch is exactly matched to the input melody's.
+        </p>
+
+        <p>
+          We use following audio processing methods to to achieve these functions:
           <br>
-          - Pitch tracking: analyze input human voice and melody, obtaining their time and frequency information.
+
+          - <b>Pitch tracking</b>: analyze input human voice and melody, obtaining their time and frequency information.
           <br>
-          - Beat tracking: detect onset and match voice with input melody.
+          - <b>Beat tracking</b>: detect onset and match voice with input melody.
           <br>
-          - Phase vocoder: shift pitch.
+          - <b>Phase vocoder</b>: shift pitch.
         </p>
       </div>
       
       <div class="jumbotron" id="RelatedWorks">
         <h2>Related Works</h2>
+
+        <h3>Software: Auto-Tune</h3>
+        <p>
+          Wiki: <a href="http://en.wikipedia.org/wiki/Auto-Tune">http://en.wikipedia.org/wiki/Auto-Tune</a><br>
+          Introduction: Auto-Tune is a software that used to create perfectly tuned vocals. It is based on the phase vocoder principle. Also, it is widely used in music industry.
+        </p>
+
+        <h3>Mobile App: Songify by Smule</h3>
+        <p>
+          iTunes App Store：<a href="https://itunes.apple.com/us/app/songify-by-smule/id438735719?mt=8">https://itunes.apple.com/us/app/songify-by-smule/id438735719?mt=8</a>
+          <br>
+          Introduction: Songify can automatically turn speech into music, creating the vocal effect that appears in the popular video "<a href="https://www.youtube.com/watch?v=tBb4cjjj1gI">AutoTune The News</a>" on YouTube.
+        </p>
+
+        <h3>Paper</h3>
       </div>
 
       <div class="jumbotron" id="Example">
         <h2>Example</h2>
         <p>
-          Here is an example to show the audio processing procedure of AutoTuner.<br>
+          Here is an example to show the audio processing procedure of Tune Helper.<br>
           Human voice input. Click to play sound.<br>
           Melody. Click to play sound.<br>
-          Output of AutoTuner. Click to play sound.<br>
+          Output of Tune Helper. Click to play sound.<br>
         </p>
       </div>
 
       <div class="jumbotron" id="Method">
         <h2>Method</h2>
+        <p>
+          We use primarily these three methods, pitch tracking, beat tracking and phase vocoder, to write the core functions of Tune Helper.
+        </p>
+        <h3>Pitch Tracking</h3>
+        <h3>Beat Tracking</h3>
+        <h3>Phase Vocoder</h3>
       </div>
 
       <div class="jumbotron" id="References">
