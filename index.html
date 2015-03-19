@@ -35,8 +35,9 @@
         <br>
         <a href="#About" class="btn btn-success btn-xs" role="button">About</a>
         <a href="#RelatedWorks" class="btn btn-success btn-xs" role="button">Related Works</a>
-        <a href="#Example" class="btn btn-success btn-xs" role="button">Example</a>
+        <a href="#ProgramStructure" class="btn btn-success btn-xs" role="button">Program Structure</a>
         <a href="#Method" class="btn btn-success btn-xs" role="button">Method</a>
+        <a href="#Example" class="btn btn-success btn-xs" role="button">Example</a>
         <a href="#References" class="btn btn-success btn-xs" role="button">References</a>
         
         <br>
@@ -100,16 +101,27 @@
         </p>
       </div>
 
-      <div class="jumbotron" id="Example">
-        <h2>Example</h2>
-        <p>
-          Here is an example to show the audio processing procedure of Tune Helper.<br>
-          <br>
-          Human voice input. Click to play sound.<br>
-          Melody. <a href="apologize_melody.mp3">Play</a><br>
-          Output of Tune Helper. Click to play sound.<br>
-        </p>
+      <div class="jumbotron" id="ProgramStructure">
+        <h2>Program Structure</h2>
+        <p>Tune Helper is consisted of two functions, Auto-tuning, and Speech-to-sing.</p>
+
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <h3>Auto-tuning</h3>
+            <img src="auto-tuning.png">
+            <br>
+          </div>
+
+          <div class="col-sm-6">
+            <h3>Speech-to-sing</h3>    
+          </div>
+        </div>
+
+        
+
+        
       </div>
+      
 
       <div class="jumbotron" id="Method">
         <h2>Method</h2>
@@ -119,6 +131,41 @@
         <h3>Pitch Tracking</h3>
         <h3>Beat Tracking</h3>
         <h3>Phase Vocoder</h3>
+        <br>
+
+      </div>
+
+      <div class="jumbotron" id="Example">
+        <h2>Example</h2>
+        <p>
+          Here is an example to show the audio processing procedure of Tune Helper.<br>
+        </p>
+
+        <div id="Speech-to-song">
+          <h3>- Speech-to-song</h3>
+          <p>
+            Human voice input.
+            <a href="#" class="btn btn-default btn-sm" role="button">
+              <span class="glyphicon glyphicon-play"></span>
+            </a>
+            <br>          
+
+            Melody. 
+            <a href="apologize_melody.mp3" class="btn btn-default btn-sm" role="button">
+              <span class="glyphicon glyphicon-play"></span>
+            </a>
+            <br>
+            Output of Tune Helper. 
+            <a href="apologize_melody.mp3" class="btn btn-default btn-sm" role="button">
+              <span class="glyphicon glyphicon-play"></span>
+            </a>
+          </p>
+        </div>
+
+        <div id="Auto-tuning">
+          <h3>- Auto-tuning</h3>
+        </div>
+        
       </div>
 
       <div class="jumbotron" id="References">
