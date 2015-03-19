@@ -14,6 +14,25 @@
   </head>
   
   <body>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><b>Tune Helper</b></a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Related Works</a></li>
+          <li><a href="#">Program Structure</a></li>
+          <li><a href="#">User Interface</a></li>
+          <li><a href="">Method</a></li>
+          <li><a href="">Example</a></li>
+          <li><a href="">References</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
     <div class="container">
 
       <div class="jumbotron">
@@ -33,22 +52,23 @@
 
         </p> 
         <br>
-        <a href="#About" class="btn btn-success btn-xs" role="button">About</a>
+<!--         <a href="#About" class="btn btn-success btn-xs" role="button">About</a>
         <a href="#RelatedWorks" class="btn btn-success btn-xs" role="button">Related Works</a>
         <a href="#ProgramStructure" class="btn btn-success btn-xs" role="button">Program Structure</a>
+        <a href="#UserInterface" class="btn btn-success btn-xs" role="button">User Interface</a>
         <a href="#Method" class="btn btn-success btn-xs" role="button">Method</a>
         <a href="#Example" class="btn btn-success btn-xs" role="button">Example</a>
-        <a href="#References" class="btn btn-success btn-xs" role="button">References</a>
+        <a href="#References" class="btn btn-success btn-xs" role="button">References</a> -->
         
-        <br>
-        <br>
+        <!-- <br> -->
+        <!-- <br> -->
         <button type="button" class="btn btn-info">Get source code</button>
       </div>
 
       <div class="jumbotron" id="About">
         <h2>About Tune Helper</h2>
         <p>
-          Tune Helper is a program that can tune human voice to sing a simple melody, or create perfectly tuned vocals by altering off-key pitches.<br>
+          <b>Tune Helper</b> is a program that can "<b>Speech-to-sing</b>", tuning human voice to sing a simple melody, or "<b>Auto-tuning</b>", creating perfectly tuned vocals by altering off-key pitches.<br>
           It is written and built in MATLAB.<br>
           
         </p>
@@ -69,7 +89,7 @@
           <br>
           - <b>Beat tracking</b>: detect beat and match voice with input melody.
           <br>
-          - <b>Phase vocoder</b>: shift pitch.
+          - <b>Phase vocoder</b>: time stretch and compress.
         </p>
       </div>
       
@@ -103,7 +123,7 @@
 
       <div class="jumbotron" id="ProgramStructure">
         <h2>Program Structure</h2>
-        <p>Tune Helper is consisted of two functions, Auto-tuning, and Speech-to-sing.</p>
+        <p>Tune Helper consists of two functions, <b>Auto-tuning</b>, and <b>Speech-to-sing</b>. The structure of these two functions are showed as follows.</p>
 
         <div class="row">
           <div class="col-sm-6 text-center">
@@ -112,13 +132,19 @@
             <br>
           </div>
 
-          <div class="col-sm-6">
+          <div class="col-sm-6 text-center">
             <h3>Speech-to-sing</h3>    
+            <img src="speech-to-sing.png">
           </div>
         </div>
+      </div>
 
-        
-
+      <div class="jumbotron" id="UserInterface">
+        <h2>User Interface</h2>
+        <p>The user interface of Tune Helper is written and built in MATLAB as well.</p>
+        <div class="text-center">
+          <img src="ui.png">
+        </div>
         
       </div>
       
@@ -127,10 +153,16 @@
         <h2>Method</h2>
         <p>
           We use primarily these three methods, pitch tracking, beat tracking and phase vocoder, to write the core functions of Tune Helper.
+          <br>
+          <b>Pitch Tracking</b>:
+          <br>
+          <b>Beat Tracking</b>:
+          <br>
+          <b>Phase Vocoder</b>:
         </p>
-        <h3>Pitch Tracking</h3>
-        <h3>Beat Tracking</h3>
-        <h3>Phase Vocoder</h3>
+        
+        
+        
         <br>
 
       </div>
