@@ -28,7 +28,8 @@
             <li><a href="#ProgramStructure">Program Structure</a></li>
             <li><a href="#UserInterface">User Interface</a></li>
             <li><a href="#Method">Method</a></li>
-            <li><a href="#Example">Example</a></li>
+            <li><a href="#Example">Examples</a></li>
+            <li><a href="#Conclusion">Conclusion</a></li>
             <li><a href="#References">References</a></li>
           </ul>
         </div>
@@ -41,18 +42,18 @@
         <h1 style="font-family:'Nanum Brush Script', serif;">Tune Helper</h1>
 
         <p>
-          Final Project of EECS 352，2015 Winter Quarter. <br>
-          Abstract: <a href="">HERE IS THE URL OF ABSTRACT</a>
+          An auto-tuning program for EECS352，2015 Winter Quarter. <br>
+          Paper: <a href="">HERE IS THE URL OF ABSTRACT</a>
           <br>
           <br>
           EECS 352 - Machine Perception of Music and Audio, Northwestern University<br>
           Course website: <a href="http://www.cs.northwestern.edu/~pardo/courses/eecs352/">http://www.cs.northwestern.edu/~pardo/courses/eecs352/</a><br>
-          Instructor: Prof.<a href="http://www.cs.northwestern.edu/~pardo/">Bryan Pardo</a><br>
+          Instructor: Prof. Bryan Pardo<br>
           <br>
-          Team name: Voice Thingy<br>
-          Team member: <a href="https://github.com/chenzhe142">Zhe Chen</a>, <a href="mailto:chenxingwu2014@u.northwestern.edu">Chenxing Wu</a>, <a href="mailto:maxinchen2014@u.northwestern.edu">Maxin Chen</a>
+          <!-- Team name: Voice Thingy<br> -->
+          Team member: <a href="mailto:zhechen2014@u.northwestern.edu">Zhe Chen</a>, <a href="mailto:chenxingwu2014@u.northwestern.edu">Chenxing Wu</a>, <a href="mailto:maxinchen2014@u.northwestern.edu">Maxin Chen</a>
           <br>
-          Contact Email: <a href="mailto:chenxingwu2014@u.northwestern.edu">chenxingwu2014@u.northwestern.edu</a>, <a href="mailto:zhechen2014@u.northwestern.edu">zhechen2014@u.northwestern.edu</a>, <a href="mailto:maxinchen2014@u.northwestern.edu">maxinchen2014@u.northwestern.edu</a>
+<!--           Contact Email: <a href="mailto:chenxingwu2014@u.northwestern.edu">chenxingwu2014@u.northwestern.edu</a>, <a href="mailto:zhechen2014@u.northwestern.edu">zhechen2014@u.northwestern.edu</a>, <a href="mailto:maxinchen2014@u.northwestern.edu">maxinchen2014@u.northwestern.edu</a> -->
 
         </p> 
         <br>
@@ -95,6 +96,7 @@
           <br>
           - <b>Phase vocoder</b>: time stretch and compress.
         </p>
+        <p>Check out the <a href="#Example">examples</a> below to see how it works.</p>
 
         <a href="#head-navbar">Back to top</a>
       </div>
@@ -119,12 +121,13 @@
         </p>
 
         <h3>Paper:</h3>
-        <p>
+        <p>Check <a href="#References">references</a> for details.</p>
+        <!-- <p>
           [1]. Middleton, Gareth. "Frequency Domain Pitch Correction." Connexions, December 17 (2003).<br>
           [2]. Laroche, Jean, and Mark Dolson. "Improved phase vocoder time-scale modification of audio." Speech and Audio Processing, IEEE Transactions on 7.3 (1999): 323-332.<br>
           [3]. Tyrangiel, Josh. "Auto-tune: Why pop music sounds perfect." Time Magazine (2009): 1877372-3.<br>
           [4]. Bello, Juan Pablo, Giuliano Monti, and Mark B. Sandler. "Techniques for Automatic Music Transcription." ISMIR. 2000.
-        </p>
+        </p> -->
 
         <a href="#head-navbar">Back to top</a>
       </div>
@@ -178,11 +181,16 @@
         </p>
 
         <p>
-          <b>Beat Tracking</b>:
+          <b>Beat Tracking</b>:<br>
+          We use the method from paper: <a href="http://www.ee.columbia.edu/~dpwe/pubs/Ellis07-beattrack.pdf">Beat Tracking by Dynamic Programming</a>.
         </p>
 
         <p>
-          <b>Phase Vocoder</b>:
+          <b>Phase Vocoder</b>:<br>
+          We use <a href="PV.m">PV.m</a> phase vocoder to stretch and compress time for audio clip.<br>
+          Usage:
+          <code>y=PV(x,fs,hopin,hopout);</code>
+
         </p>
         
         
@@ -192,7 +200,7 @@
       </div>
 
       <div class="jumbotron" id="Example">
-        <h2>Example</h2>
+        <h2>Examples</h2>
         <p>
           Here are two examples to show and demonstrate the audio processing procedure of Tune Helper.<br>
         </p>
@@ -266,13 +274,20 @@
         <a href="#head-navbar">Back to top</a>
       </div>
 
+      <div class="jumbotron" id="Conclusion">
+        <h2>Conclusion</h2>
+        <p>In our project, we achieved both auto-tuning and speech-to-sing functions by using pitch tracking, beat tracking and phase vocoder. We use spectrograms to analyze and compare the result with input. We can get an ideal audio output by our program, Tune Helper.</p>
+        <a href="#head-navbar">Back to top</a>
+      </div>
+
       <div class="jumbotron" id="References">
         <h2>References</h2>
         <p>
           [1]. Middleton, Gareth. "Frequency Domain Pitch Correction." Connexions, December 17 (2003).<br>
           [2]. Laroche, Jean, and Mark Dolson. "Improved phase vocoder time-scale modification of audio." Speech and Audio Processing, IEEE Transactions on 7.3 (1999): 323-332.<br>
           [3]. Tyrangiel, Josh. "Auto-tune: Why pop music sounds perfect." Time Magazine (2009): 1877372-3.<br>
-          [4]. Bello, Juan Pablo, Giuliano Monti, and Mark B. Sandler. "Techniques for Automatic Music Transcription." ISMIR. 2000.
+          [4]. Bello, Juan Pablo, Giuliano Monti, and Mark B. Sandler. "Techniques for Automatic Music Transcription." ISMIR. 2000.<br>
+          [5]. Ellis, Daniel PW. "Beat tracking by dynamic programming." Journal of New Music Research 36.1 (2007): 51-60.
         </p>
 
         <a href="#head-navbar">Back to top</a>
