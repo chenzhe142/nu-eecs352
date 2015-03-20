@@ -152,8 +152,23 @@
           </p>
           <p>
             Measurement:<br>
-            We present the time-frequency spectrograms of human voice input, piano melody input, and output audio, showed below. Comparing these three spectrograms, we can find out that...
+            We present the time-frequency spectrograms of human voice input, piano melody input, and output audio, showed below. Comparing these three spectrograms, we can find out that each syllable can be detected and shifted to the notes in melody, showed in Figure 1.3. Using our program, user can import a simple melody, record the speech, and get a singing-speech.
           </p>
+
+          <div class="row text-center">
+              <img src="sing_voice.png" style="height: 500px"><br>
+              <p>Figure 1.1 Spectrogram of speech</p>
+          </div>
+
+          <div class="row text-center">
+            <img src="sing_melody.png" style="height: 500px">
+            <p>Figure 1.2 Spectrogram of melody</p>
+          </div>
+
+          <div class="row text-center">
+            <img src="sing_result.png" style="height: 500px">
+            <p>Figure 1.3 Spectrogram of singing-speech</p>
+          </div>
         </div>
 
         <div id="Auto-tuning">
@@ -183,12 +198,12 @@
           
           <div class="row text-center">
               <img src="to-tune.png" style="height: 500px"><br>
-              <p>Figure 6.4 Spectrogram of vocal input</p>
+              <p>Figure 1.4 Spectrogram of vocal input</p>
           </div>
 
           <div class="row text-center">
             <img src="tuned.png" style="height: 500px">
-            <p>Figure 6.5 Spectrogram of auto-tuning output</p>
+            <p>Figure 1.5 Spectrogram of auto-tuning output</p>
           </div>
 
         </div>
@@ -201,7 +216,7 @@
       <div class="jumbotron" id="ProgramStructure">
         <h2>Program Structure</h2>
         <hr>
-        <p>Tune Helper consists of two functions, <b>Auto-tuning</b>, and <b>Speech-to-sing</b>. The structure of these two functions are showed as follows.</p>
+        <p>Tune Helper consists of two functions, <b>Auto-tuning</b>, and <b>Speech-to-sing</b>.The structure and core functions of these two functions are showed as follows.</p>
 
         <div class="row">
           <div class="col-sm-6 text-center">
@@ -230,6 +245,8 @@
           <br>
           <p>Figure 3.1 Tune Helper user interface</p>
         </div>
+        <p>User can record vocals and speech when hitting the "Record" button showing on upper right. For the functions of output audios, we also add some cool effects, for example, creating "rap" by adjusting syllables of input speech to the beat, or adding some instrumental components to output audio.</p>
+
         <a href="#head-navbar">Back to top</a>
       </div>
 
