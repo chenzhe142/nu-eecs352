@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8"> 
 
-    <title>EECS352 - Tune Helper</title>
+    <title>Tune Helper</title>
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css">
 
@@ -19,41 +19,48 @@
     <nav class="navbar navbar-default" id="head-navbar">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#"><b>Tune Helper</b></a>
+          <a class="navbar-brand" href="#" ><b>Tune Helper</b></a>
         </div>
         <div>
           <ul class="nav navbar-nav">
             <li><a href="#About">About</a></li>
-            <li><a href="#RelatedWorks">Related Works</a></li>
-            <li><a href="#ProgramStructure">Program Structure</a></li>
-            <li><a href="#UserInterface">User Interface</a></li>
-            <li><a href="#Method">Method</a></li>
+            <li><a href="#Method">Approaches</a></li>
             <li><a href="#Example">Examples</a></li>
+            <li><a href="#ProgramStructure">Structure</a></li>
+            <li><a href="#UserInterface">User Interface</a></li>
             <li><a href="#Conclusion">Conclusion</a></li>
-            <li><a href="#References">References</a></li>
+            <li><a href="#RelatedWorks">Related Works</a></li>
+            <!-- <li><a href="#References">References</a></li> -->
           </ul>
         </div>
       </div>
     </nav>
 
     <div class="container">
+      <img src="slogan.png" style="height: 450px;">
 
-      <div class="jumbotron">
-        <h1 style="font-family:'Nanum Brush Script', serif;">Tune Helper</h1>
+      <div class="jumbotron" style="background-color:white;">
+        <!-- <div class="row">
+          <div class="col-sm-6">
+            <h1 style="font-family:'Nanum Brush Script', serif;">Tune Helper</h1>
+          </div>
+          
+        </div> -->
+
+        
 
         <p>
-          An auto-tuning program for EECS352，2015 Winter Quarter. <br>
+          Fianl project for Northwestern University <a href="http://www.cs.northwestern.edu/~pardo/courses/eecs352/">EECS 352</a>，Instructor Prof. Bryan Pardo.<br>
           Paper: <a href="">HERE IS THE URL OF ABSTRACT</a>
           <br>
-          <br>
-          EECS 352 - Machine Perception of Music and Audio, Northwestern University<br>
-          Course website: <a href="http://www.cs.northwestern.edu/~pardo/courses/eecs352/">http://www.cs.northwestern.edu/~pardo/courses/eecs352/</a><br>
-          Instructor: Prof. Bryan Pardo<br>
+          
+          
+<!--           Course website: <a href="http://www.cs.northwestern.edu/~pardo/courses/eecs352/">http://www.cs.northwestern.edu/~pardo/courses/eecs352/</a><br> -->
+          <!-- Instructor: Prof. Bryan Pardo<br> -->
           <br>
           <!-- Team name: Voice Thingy<br> -->
           Team member: <a href="mailto:zhechen2014@u.northwestern.edu">Zhe Chen</a>, <a href="mailto:chenxingwu2014@u.northwestern.edu">Chenxing Wu</a>, <a href="mailto:maxinchen2014@u.northwestern.edu">Maxin Chen</a>
           <br>
-<!--           Contact Email: <a href="mailto:chenxingwu2014@u.northwestern.edu">chenxingwu2014@u.northwestern.edu</a>, <a href="mailto:zhechen2014@u.northwestern.edu">zhechen2014@u.northwestern.edu</a>, <a href="mailto:maxinchen2014@u.northwestern.edu">maxinchen2014@u.northwestern.edu</a> -->
 
         </p> 
         <br>
@@ -67,25 +74,22 @@
         
         <!-- <br> -->
         <!-- <br> -->
-        <button type="button" class="btn btn-info">Get source code</button>
+        <button type="button" class="btn btn-info">View on GitHub</button>
       </div>
 
       <div class="jumbotron" id="About">
         <h2>About Tune Helper</h2>
+
         <p>
-          <b>Tune Helper</b> is a program that can "<b>Speech-to-sing</b>", tuning human voice to sing a simple melody, or "<b>Auto-tuning</b>", creating perfectly tuned vocals by altering off-key pitches.<br>
+          Tune Helper is a program that can "Speech-to-sing", tuning human voice to sing a simple melody, or "Auto-tuning", creating perfectly tuned vocals by altering off-key pitches.<br>
           It is written and built in MATLAB.<br>
           
         </p>
 
-        <p>
-          Our final project Tune Helper is inspired by music software Auto-Tune, which can auto correlate vocals, creating a very cool electronic vocal effect. (See <a href="#RelatedWorks">Related Works</a> for details)
-        </p>
-
+        <h3>Goals and Process</h3>
         <p>
           We want to implement the basic function of Auto-Tune, pitch auto-correction, on MATLAB by ourselves. And we also want to create an interesting function, which uses human speech and a simple melody as input, after the audio processing procedure, combining human speech with melody, producing an audio which is a tuned human speech that its pitch is exactly matched to the input melody's.
         </p>
-
         <p>
           We use following audio processing methods to to achieve these functions:
           <br>
@@ -98,76 +102,27 @@
         </p>
         <p>Check out the <a href="#Example">examples</a> below to see how it works.</p>
 
+        <h3>Motivation</h3>
+        
+
+        <p>
+          Our final project Tune Helper is inspired by music software Auto-Tune, which can auto correlate vocals, creating a very cool electronic vocal effect. (See <a href="#RelatedWorks">Related Works</a> for details)
+        </p>
+
+        
+
+        
+
         <a href="#head-navbar">Back to top</a>
       </div>
       
-      <div class="jumbotron" id="RelatedWorks">
-        <h2>Related Works</h2>
-        <p>
-          There are several existing software and papers that are related to our project, showed as follows.
-        </p>
+      
 
-        <h3>Software: Auto-Tune</h3>
-        <p>
-          Wiki: <a href="http://en.wikipedia.org/wiki/Auto-Tune">http://en.wikipedia.org/wiki/Auto-Tune</a><br>
-          Introduction: Auto-Tune is a software that used to create perfectly tuned vocals. It is based on the phase vocoder principle. Also, it is widely used in music industry.
-        </p>
-
-        <h3>Mobile App: Songify by Smule</h3>
-        <p>
-          iTunes App Store：<a href="https://itunes.apple.com/us/app/songify-by-smule/id438735719?mt=8">https://itunes.apple.com/us/app/songify-by-smule/id438735719?mt=8</a>
-          <br>
-          Introduction: Songify can automatically turn speech into music, creating the vocal effect that appears in the popular video "<a href="https://www.youtube.com/watch?v=tBb4cjjj1gI">AutoTune The News</a>" on YouTube.
-        </p>
-
-        <h3>Paper:</h3>
-        <p>Check <a href="#References">references</a> for details.</p>
-        <!-- <p>
-          [1]. Middleton, Gareth. "Frequency Domain Pitch Correction." Connexions, December 17 (2003).<br>
-          [2]. Laroche, Jean, and Mark Dolson. "Improved phase vocoder time-scale modification of audio." Speech and Audio Processing, IEEE Transactions on 7.3 (1999): 323-332.<br>
-          [3]. Tyrangiel, Josh. "Auto-tune: Why pop music sounds perfect." Time Magazine (2009): 1877372-3.<br>
-          [4]. Bello, Juan Pablo, Giuliano Monti, and Mark B. Sandler. "Techniques for Automatic Music Transcription." ISMIR. 2000.
-        </p> -->
-
-        <a href="#head-navbar">Back to top</a>
-      </div>
-
-      <div class="jumbotron" id="ProgramStructure">
-        <h2>Program Structure</h2>
-        <p>Tune Helper consists of two functions, <b>Auto-tuning</b>, and <b>Speech-to-sing</b>. The structure of these two functions are showed as follows.</p>
-
-        <div class="row">
-          <div class="col-sm-6 text-center">
-            <h3>Auto-tuning</h3>
-            <img src="auto-tuning.png">
-            <br>
-            <p>Figure 2.1</p>
-          </div>
-
-          <div class="col-sm-6 text-center">
-            <h3>Speech-to-sing</h3>    
-            <img src="speech-to-sing.png">
-            <br>
-            <p>Figure 2.2</p>
-          </div>
-        </div>
-        <a href="#head-navbar">Back to top</a>
-      </div>
-
-      <div class="jumbotron" id="UserInterface">
-        <h2>User Interface</h2>
-        <p>The user interface of Tune Helper is written and built in MATLAB as well.</p>
-        <div class="text-center">
-          <img src="ui.png">
-          <br>
-          <p>Figure 3.1 Tune Helper user interface</p>
-        </div>
-        <a href="#head-navbar">Back to top</a>
-      </div>
+      
       
 
       <div class="jumbotron" id="Method">
-        <h2>Method</h2>
+        <h2>Approaches</h2>
         <p>
           We use primarily these three methods, pitch tracking, beat tracking and phase vocoder, to write the core functions of Tune Helper.
           <br>
@@ -274,13 +229,77 @@
         <a href="#head-navbar">Back to top</a>
       </div>
 
+      <div class="jumbotron" id="ProgramStructure">
+        <h2>Program Structure</h2>
+        <p>Tune Helper consists of two functions, <b>Auto-tuning</b>, and <b>Speech-to-sing</b>. The structure of these two functions are showed as follows.</p>
+
+        <div class="row">
+          <div class="col-sm-6 text-center">
+            <h3>Auto-tuning</h3>
+            <img src="auto-tuning.png">
+            <br>
+            <p>Figure 2.1</p>
+          </div>
+
+          <div class="col-sm-6 text-center">
+            <h3>Speech-to-sing</h3>    
+            <img src="speech-to-sing.png">
+            <br>
+            <p>Figure 2.2</p>
+          </div>
+        </div>
+        <a href="#head-navbar">Back to top</a>
+      </div>
+
+      <div class="jumbotron" id="UserInterface">
+        <h2>User Interface</h2>
+        <p>The user interface of Tune Helper is written and built in MATLAB as well.</p>
+        <div class="text-center">
+          <img src="ui.png">
+          <br>
+          <p>Figure 3.1 Tune Helper user interface</p>
+        </div>
+        <a href="#head-navbar">Back to top</a>
+      </div>
+
       <div class="jumbotron" id="Conclusion">
         <h2>Conclusion</h2>
         <p>In our project, we achieved both auto-tuning and speech-to-sing functions by using pitch tracking, beat tracking and phase vocoder. We use spectrograms to analyze and compare the result with input. We can get an ideal audio output by our program, Tune Helper.</p>
         <a href="#head-navbar">Back to top</a>
       </div>
 
-      <div class="jumbotron" id="References">
+      <div class="jumbotron" id="RelatedWorks">
+        <h2>Related Works</h2>
+        <p>
+          There are several existing software and papers that are related to our project, showed as follows.
+        </p>
+
+        <h3>Software: Auto-Tune</h3>
+        <p>
+          Wiki: <a href="http://en.wikipedia.org/wiki/Auto-Tune">http://en.wikipedia.org/wiki/Auto-Tune</a><br>
+          Introduction: Auto-Tune is a software that used to create perfectly tuned vocals. It is based on the phase vocoder principle. Also, it is widely used in music industry.
+        </p>
+
+        <h3>Mobile App: Songify by Smule</h3>
+        <p>
+          iTunes App Store：<a href="https://itunes.apple.com/us/app/songify-by-smule/id438735719?mt=8">https://itunes.apple.com/us/app/songify-by-smule/id438735719?mt=8</a>
+          <br>
+          Introduction: Songify can automatically turn speech into music, creating the vocal effect that appears in the popular video "<a href="https://www.youtube.com/watch?v=tBb4cjjj1gI">AutoTune The News</a>" on YouTube.
+        </p>
+
+        <h3>Paper:</h3>
+        <p>Check <a href="#References">references</a> for details.</p>
+        <p>
+          [1]. Middleton, Gareth. "Frequency Domain Pitch Correction." Connexions, December 17 (2003).<br>
+          [2]. Laroche, Jean, and Mark Dolson. "Improved phase vocoder time-scale modification of audio." Speech and Audio Processing, IEEE Transactions on 7.3 (1999): 323-332.<br>
+          [3]. Tyrangiel, Josh. "Auto-tune: Why pop music sounds perfect." Time Magazine (2009): 1877372-3.<br>
+          [4]. Bello, Juan Pablo, Giuliano Monti, and Mark B. Sandler. "Techniques for Automatic Music Transcription." ISMIR. 2000.
+        </p>
+
+        <a href="#head-navbar">Back to top</a>
+      </div>
+
+      <!-- <div class="jumbotron" id="References">
         <h2>References</h2>
         <p>
           [1]. Middleton, Gareth. "Frequency Domain Pitch Correction." Connexions, December 17 (2003).<br>
@@ -291,7 +310,7 @@
         </p>
 
         <a href="#head-navbar">Back to top</a>
-      </div>
+      </div> -->
       
     </div>
   	
