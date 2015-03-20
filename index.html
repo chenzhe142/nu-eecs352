@@ -5,6 +5,8 @@
 
     <title>EECS352 - Tune Helper</title>
 
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <!-- jQuery library -->
@@ -14,29 +16,29 @@
   </head>
   
   <body>
-    <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#"><b>Tune Helper</b></a>
+    <nav class="navbar navbar-default" id="head-navbar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><b>Tune Helper</b></a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="#About">About</a></li>
+            <li><a href="#RelatedWorks">Related Works</a></li>
+            <li><a href="#ProgramStructure">Program Structure</a></li>
+            <li><a href="#UserInterface">User Interface</a></li>
+            <li><a href="#Method">Method</a></li>
+            <li><a href="#Example">Example</a></li>
+            <li><a href="#References">References</a></li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <ul class="nav navbar-nav">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Related Works</a></li>
-          <li><a href="#">Program Structure</a></li>
-          <li><a href="#">User Interface</a></li>
-          <li><a href="">Method</a></li>
-          <li><a href="">Example</a></li>
-          <li><a href="">References</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    </nav>
 
     <div class="container">
 
       <div class="jumbotron">
-        <h1>Tune Helper</h1>
+        <h1 style="font-family:'Nanum Brush Script', serif;">Tune Helper</h1>
 
         <p>
           Final Project of EECS 352，2015 Winter Quarter. <br>
@@ -91,6 +93,8 @@
           <br>
           - <b>Phase vocoder</b>: time stretch and compress.
         </p>
+
+        <a href="#head-navbar">Back to top</a>
       </div>
       
       <div class="jumbotron" id="RelatedWorks">
@@ -119,6 +123,8 @@
           [3]. Tyrangiel, Josh. "Auto-tune: Why pop music sounds perfect." Time Magazine (2009): 1877372-3.<br>
           [4]. Bello, Juan Pablo, Giuliano Monti, and Mark B. Sandler. "Techniques for Automatic Music Transcription." ISMIR. 2000.
         </p>
+
+        <a href="#head-navbar">Back to top</a>
       </div>
 
       <div class="jumbotron" id="ProgramStructure">
@@ -137,6 +143,7 @@
             <img src="speech-to-sing.png">
           </div>
         </div>
+        <a href="#head-navbar">Back to top</a>
       </div>
 
       <div class="jumbotron" id="UserInterface">
@@ -145,7 +152,7 @@
         <div class="text-center">
           <img src="ui.png">
         </div>
-        
+        <a href="#head-navbar">Back to top</a>
       </div>
       
 
@@ -164,40 +171,43 @@
         
         
         <br>
-
+        <a href="#head-navbar">Back to top</a>
       </div>
 
       <div class="jumbotron" id="Example">
         <h2>Example</h2>
         <p>
-          Here is an example to show the audio processing procedure of Tune Helper.<br>
+          Here are two examples to show the audio processing procedure of Tune Helper.<br>
         </p>
 
         <div id="Speech-to-song">
-          <h3>- Speech-to-song</h3>
+          <h3>Speech-to-sing</h3>
+          <p>We use the famous nursery rhyme "Mary had a little lamb" as the input of Speech-to-sing.</p>
           <p>
-            Human voice input.
-            <a href="#" class="btn btn-default btn-sm" role="button">
+            Human voice input:
+            <a href="sing_voice.mp3" class="btn btn-default btn-sm" role="button" target="blank">
               <span class="glyphicon glyphicon-play"></span>
             </a>
             <br>          
 
-            Melody. 
-            <a href="apologize_melody.mp3" class="btn btn-default btn-sm" role="button">
+            Input piano melody: 
+            <a href="sing_melody.mp3" class="btn btn-default btn-sm" role="button" target="blank">
               <span class="glyphicon glyphicon-play"></span>
             </a>
             <br>
-            Output of Tune Helper. 
-            <a href="apologize_melody.mp3" class="btn btn-default btn-sm" role="button">
+            Output of Speech-to-sing: 
+            <a href="sing_result.wav" class="btn btn-default btn-sm" role="button" target="blank">
               <span class="glyphicon glyphicon-play"></span>
             </a>
           </p>
+          <p>Explaination:</p>
         </div>
 
         <div id="Auto-tuning">
-          <h3>- Auto-tuning</h3>
+          <h3>Auto-tuning</h3>
         </div>
         
+        <a href="#head-navbar">Back to top</a>
       </div>
 
       <div class="jumbotron" id="References">
@@ -208,6 +218,8 @@
           [3]. Tyrangiel, Josh. "Auto-tune: Why pop music sounds perfect." Time Magazine (2009): 1877372-3.<br>
           [4]. Bello, Juan Pablo, Giuliano Monti, and Mark B. Sandler. "Techniques for Automatic Music Transcription." ISMIR. 2000.
         </p>
+
+        <a href="#head-navbar">Back to top</a>
       </div>
       
     </div>
