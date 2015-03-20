@@ -30,7 +30,6 @@
             <li><a href="#UserInterface">User Interface</a></li>
             <li><a href="#Conclusion">Conclusion</a></li>
             <li><a href="#RelatedWorks">Related Works</a></li>
-            <!-- <li><a href="#References">References</a></li> -->
           </ul>
         </div>
       </div>
@@ -112,14 +111,12 @@
           We use <a href="PV.m">PV.m</a> phase vocoder to perform time expansion, time compression and pitch shifting for audio clip.<br>
           Usage:
           <code>y=PV(x,fs,hopin,hopout);</code>
-
         </p>
-        
-        
-        
         <br>
         <a href="#head-navbar">Back to top</a>
       </div>
+
+
 
       <div class="jumbotron" id="Example">
         <h2>Examples</h2>
@@ -138,7 +135,7 @@
             </a>
             <br>          
 
-            Input piano melody: 
+            Piano melody input: 
             <a href="sing_melody.mp3" class="btn btn-default btn-sm" role="button" target="blank">
               <span class="glyphicon glyphicon-play"></span>
             </a>
@@ -150,10 +147,13 @@
           </p>
           <p>
             Explaination:<br> 
-            Tune Helper first uses beat tracking method to analyze both human voice input and piano melody input, extracting the time, frequency and amplitude information. It then shifts the pitch of human voice input, according to the relative pitch height information of piano melody input extracted by pitch tracker. After the processing procedure, the result is a singing speech.
+            Tune Helper first uses beat tracking method to analyze both human voice input and piano melody input, extracting the time, frequency and amplitude information. It then uses phase vocoder to  shift the pitch of human voice input, according to the relative pitch height information of piano melody input extracted by pitch tracker. After the processing procedure, the result is a singing speech.<br>
             (Check out <a href="#ProgramStructure">Program Structure</a> for details)
           </p>
-          <p>Measurement:</p>
+          <p>
+            Measurement:<br>
+            We present the time-frequency spectrograms of human voice input, piano melody input, and output audio, showed below. Comparing these three spectrograms, we can find out that...
+          </p>
         </div>
 
         <div id="Auto-tuning">
@@ -172,10 +172,9 @@
 
           <p>
             Explanation:<br>
+            Tune Helper first performs pitch tracking on input vocal, extracting its time, frequency, amplitude and pitch information. It then uses these information to calculate the nearest note for each available frequency point of input vocal. If current point is off-key, Tune Helper performs a pitch shifting by phase vocoder, shifting pitch to the nearest music note. After the processing procedure, the output audio is an auto-tuned vocal.<br>
             (Check out <a href="#ProgramStructure">Program Structure</a> for details)
           </p>
-
-          
 
           <p>
             Measurement of success:<br>
@@ -196,6 +195,8 @@
         
         <a href="#head-navbar">Back to top</a>
       </div>
+
+
 
       <div class="jumbotron" id="ProgramStructure">
         <h2>Program Structure</h2>
