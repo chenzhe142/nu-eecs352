@@ -161,8 +161,14 @@
         <p>
           We use primarily these three methods, pitch tracking, beat tracking and phase vocoder, to write the core functions of Tune Helper.
           <br>
-          <b>Pitch Tracking</b>:
+
+          <b>Pitch Tracking</b>:<br>
+          We use <a href="#">praat_pd.m</a> pitch tracker to extract the time, frequency and amplitude information from input audio.<br>
+          Usage:
+          <code>[frq_path, autoCorr_path, time, amp] = praat_pd(y,fs,0);</code>
           <br>
+
+
           <b>Beat Tracking</b>:
           <br>
           <b>Phase Vocoder</b>:
@@ -177,14 +183,14 @@
       <div class="jumbotron" id="Example">
         <h2>Example</h2>
         <p>
-          Here are two examples to show the audio processing procedure of Tune Helper.<br>
+          Here are two examples to show and demonstrate the audio processing procedure of Tune Helper.<br>
         </p>
 
         <div id="Speech-to-song">
           <h3>Speech-to-sing</h3>
           <p>We use the famous nursery rhyme "Mary had a little lamb" as the input of Speech-to-sing.</p>
           <p>
-            Human voice input:
+            Human voice input: 
             <a href="sing_voice.mp3" class="btn btn-default btn-sm" role="button" target="blank">
               <span class="glyphicon glyphicon-play"></span>
             </a>
@@ -200,11 +206,27 @@
               <span class="glyphicon glyphicon-play"></span>
             </a>
           </p>
-          <p>Explaination:</p>
+          <p>
+            Explaination:<br> 
+            Tune Helper first uses beat tracking method to analyze both human voice input and piano melody input, extracting the time, frequency and amplitude information. It then shifts the pitch of human voice input, according to the relative pitch height information of piano melody input extracted by pitch tracker. After the processing procedure, the result is a singing speech.
+          </p>
+          <p>Spectrogram:</p>
         </div>
+
+        <br>
 
         <div id="Auto-tuning">
           <h3>Auto-tuning</h3>
+          <p>Spectrogram:</p>
+          
+          <div class="row text-center">
+              <img src="to-tune.png" style="height: 600px">
+          </div>
+
+          <div class="row text-center">
+            <img src="tuned.png" style="height: 600px">
+          </div>
+
         </div>
         
         <a href="#head-navbar">Back to top</a>
