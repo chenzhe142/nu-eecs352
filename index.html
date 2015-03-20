@@ -216,7 +216,7 @@
             Tune Helper first uses beat tracking method to analyze both human voice input and piano melody input, extracting the time, frequency and amplitude information. It then shifts the pitch of human voice input, according to the relative pitch height information of piano melody input extracted by pitch tracker. After the processing procedure, the result is a singing speech.
             (Check <a href="#ProgramStructure">Program Structure</a> for details)
           </p>
-          <p>Spectrogram:</p>
+          <p>Measurement:</p>
         </div>
 
         <div id="Auto-tuning">
@@ -238,7 +238,12 @@
             (Check <a href="#ProgramStructure">Program Structure</a> for details)
           </p>
 
-          <p>Spectrogram:</p>
+          
+
+          <p>
+            Measurement of success:<br>
+            We present the time-frequency spectrograms of both input audio and output audio, showed as follows. From these two spectrograms, it is easy to find out, that comparing to the input audio, the frequencies of auto-tuning output audio has been shifted to nearest notes, showing as "steps" in Figure 6.5.
+          </p>
           
           <div class="row text-center">
               <img src="to-tune.png" style="height: 600px"><br>
