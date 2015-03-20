@@ -136,11 +136,14 @@
             <h3>Auto-tuning</h3>
             <img src="auto-tuning.png">
             <br>
+            <p>Figure 2.1</p>
           </div>
 
           <div class="col-sm-6 text-center">
             <h3>Speech-to-sing</h3>    
             <img src="speech-to-sing.png">
+            <br>
+            <p>Figure 2.2</p>
           </div>
         </div>
         <a href="#head-navbar">Back to top</a>
@@ -151,6 +154,8 @@
         <p>The user interface of Tune Helper is written and built in MATLAB as well.</p>
         <div class="text-center">
           <img src="ui.png">
+          <br>
+          <p>Figure 3.1 Tune Helper user interface</p>
         </div>
         <a href="#head-navbar">Back to top</a>
       </div>
@@ -209,6 +214,7 @@
           <p>
             Explaination:<br> 
             Tune Helper first uses beat tracking method to analyze both human voice input and piano melody input, extracting the time, frequency and amplitude information. It then shifts the pitch of human voice input, according to the relative pitch height information of piano melody input extracted by pitch tracker. After the processing procedure, the result is a singing speech.
+            (Check <a href="#ProgramStructure">Program Structure</a> for details)
           </p>
           <p>Spectrogram:</p>
         </div>
@@ -217,14 +223,33 @@
 
         <div id="Auto-tuning">
           <h3>Auto-tuning</h3>
+          <p>
+            Vocal input:
+            <a href="#" class="btn btn-default btn-sm" role="button" target="blank">
+              <span class="glyphicon glyphicon-play"></span>
+            </a>
+            <br>
+            Output of Auto-tuning:
+            <a href="#" class="btn btn-default btn-sm" role="button" target="blank">
+              <span class="glyphicon glyphicon-play"></span>
+            </a>
+          </p>
+
+          <p>
+            Explanation:<br>
+            (Check <a href="#ProgramStructure">Program Structure</a> for details)
+          </p>
+
           <p>Spectrogram:</p>
           
           <div class="row text-center">
-              <img src="to-tune.png" style="height: 600px">
+              <img src="to-tune.png" style="height: 600px"><br>
+              <p>Figure 6.4 Spectrogram of vocal input</p>
           </div>
 
           <div class="row text-center">
             <img src="tuned.png" style="height: 600px">
+            <p>Figure 6.5 Spectrogram of auto-tuning output</p>
           </div>
 
         </div>
