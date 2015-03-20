@@ -23,10 +23,10 @@
         </div>
         <div>
           <ul class="nav navbar-nav">
-            <li><a href="#About">About</a></li>
+            <li><a href="#Introduction">Introduction</a></li>
             <li><a href="#Method">Approaches</a></li>
             <li><a href="#Example">Examples</a></li>
-            <li><a href="#ProgramStructure">Structure</a></li>
+            <li><a href="#ProgramStructure">Program Structure</a></li>
             <li><a href="#UserInterface">User Interface</a></li>
             <li><a href="#Conclusion">Conclusion</a></li>
             <li><a href="#RelatedWorks">Related Works</a></li>
@@ -64,26 +64,22 @@
 
         </p> 
         <br>
-<!--         <a href="#About" class="btn btn-success btn-xs" role="button">About</a>
-        <a href="#RelatedWorks" class="btn btn-success btn-xs" role="button">Related Works</a>
-        <a href="#ProgramStructure" class="btn btn-success btn-xs" role="button">Program Structure</a>
-        <a href="#UserInterface" class="btn btn-success btn-xs" role="button">User Interface</a>
-        <a href="#Method" class="btn btn-success btn-xs" role="button">Method</a>
-        <a href="#Example" class="btn btn-success btn-xs" role="button">Example</a>
-        <a href="#References" class="btn btn-success btn-xs" role="button">References</a> -->
-        
-        <!-- <br> -->
-        <!-- <br> -->
         <button type="button" class="btn btn-info">View on GitHub</button>
       </div>
 
-      <div class="jumbotron" id="About">
-        <h2>About Tune Helper</h2>
-
+      <div class="jumbotron" id="Introduction">
+        <h2>Introduction</h2>
+        <hr>
+        <h3>What is Tune Helper</h3>
         <p>
           Tune Helper is a program that can "Speech-to-sing", tuning human voice to sing a simple melody, or "Auto-tuning", creating perfectly tuned vocals by altering off-key pitches.<br>
           It is written and built in MATLAB.<br>
           
+        </p>
+
+        <h3>Motivation</h3>
+        <p>
+          Our final project Tune Helper is inspired by music software Auto-Tune, which can auto correlate vocals, creating a very cool electronic vocal effect. (See <a href="#RelatedWorks">Related Works</a> for details)
         </p>
 
         <h3>Goals and Process</h3>
@@ -100,29 +96,13 @@
           <br>
           - <b>Phase vocoder</b>: time stretch and compress.
         </p>
-        <p>Check out the <a href="#Example">examples</a> below to see how it works.</p>
-
-        <h3>Motivation</h3>
-        
-
-        <p>
-          Our final project Tune Helper is inspired by music software Auto-Tune, which can auto correlate vocals, creating a very cool electronic vocal effect. (See <a href="#RelatedWorks">Related Works</a> for details)
-        </p>
-
-        
-
-        
-
+        <p>Check out <a href="#Method">approaches</a> and <a href="#Example">examples</a> below to see how it works.</p>
         <a href="#head-navbar">Back to top</a>
       </div>
       
-      
-
-      
-      
-
       <div class="jumbotron" id="Method">
         <h2>Approaches</h2>
+        <hr>
         <p>
           We use primarily these three methods, pitch tracking, beat tracking and phase vocoder, to write the core functions of Tune Helper.
           <br>
@@ -142,7 +122,8 @@
 
         <p>
           <b>Phase Vocoder</b>:<br>
-          We use <a href="PV.m">PV.m</a> phase vocoder to stretch and compress time for audio clip.<br>
+          Wiki:<a href="http://en.wikipedia.org/wiki/Phase_vocoder">http://en.wikipedia.org/wiki/Phase_vocoder</a><br>
+          We use <a href="PV.m">PV.m</a> phase vocoder to perform time expansion, time compression and pitch shifting for audio clip.<br>
           Usage:
           <code>y=PV(x,fs,hopin,hopout);</code>
 
@@ -156,12 +137,13 @@
 
       <div class="jumbotron" id="Example">
         <h2>Examples</h2>
+        <hr>
         <p>
           Here are two examples to show and demonstrate the audio processing procedure of Tune Helper.<br>
         </p>
 
         <div id="Speech-to-song">
-          <h3>Speech-to-sing</h3>
+          <h3>1. Speech-to-sing</h3>
           <p>We use the famous nursery rhyme "Mary had a little lamb" as the input of Speech-to-sing.</p>
           <p>
             Human voice input: 
@@ -183,13 +165,13 @@
           <p>
             Explaination:<br> 
             Tune Helper first uses beat tracking method to analyze both human voice input and piano melody input, extracting the time, frequency and amplitude information. It then shifts the pitch of human voice input, according to the relative pitch height information of piano melody input extracted by pitch tracker. After the processing procedure, the result is a singing speech.
-            (Check <a href="#ProgramStructure">Program Structure</a> for details)
+            (Check out <a href="#ProgramStructure">Program Structure</a> for details)
           </p>
           <p>Measurement:</p>
         </div>
 
         <div id="Auto-tuning">
-          <h3>Auto-tuning</h3>
+          <h3>2. Auto-tuning</h3>
           <p>
             Vocal input:
             <a href="#" class="btn btn-default btn-sm" role="button" target="blank">
@@ -204,7 +186,7 @@
 
           <p>
             Explanation:<br>
-            (Check <a href="#ProgramStructure">Program Structure</a> for details)
+            (Check out <a href="#ProgramStructure">Program Structure</a> for details)
           </p>
 
           
@@ -215,12 +197,12 @@
           </p>
           
           <div class="row text-center">
-              <img src="to-tune.png" style="height: 600px"><br>
+              <img src="to-tune.png" style="height: 500px"><br>
               <p>Figure 6.4 Spectrogram of vocal input</p>
           </div>
 
           <div class="row text-center">
-            <img src="tuned.png" style="height: 600px">
+            <img src="tuned.png" style="height: 500px">
             <p>Figure 6.5 Spectrogram of auto-tuning output</p>
           </div>
 
@@ -231,6 +213,7 @@
 
       <div class="jumbotron" id="ProgramStructure">
         <h2>Program Structure</h2>
+        <hr>
         <p>Tune Helper consists of two functions, <b>Auto-tuning</b>, and <b>Speech-to-sing</b>. The structure of these two functions are showed as follows.</p>
 
         <div class="row">
@@ -253,6 +236,7 @@
 
       <div class="jumbotron" id="UserInterface">
         <h2>User Interface</h2>
+        <hr>
         <p>The user interface of Tune Helper is written and built in MATLAB as well.</p>
         <div class="text-center">
           <img src="ui.png">
@@ -264,12 +248,19 @@
 
       <div class="jumbotron" id="Conclusion">
         <h2>Conclusion</h2>
-        <p>In our project, we achieved both auto-tuning and speech-to-sing functions by using pitch tracking, beat tracking and phase vocoder. We use spectrograms to analyze and compare the result with input. We can get an ideal audio output by our program, Tune Helper.</p>
+        <hr>
+        <p>
+          In our project, we achieved both auto-tuning and speech-to-sing functions by using pitch tracking, beat tracking and phase vocoder. We use spectrograms to analyze and compare the result with input. We can get an ideal audio output by our program, Tune Helper.
+        </p>
+        <p>
+          However, the quality of output audio is not very satisfying. The algorithm of tuning and pitch shifting should be improved in the future.
+        </p>
         <a href="#head-navbar">Back to top</a>
       </div>
 
       <div class="jumbotron" id="RelatedWorks">
         <h2>Related Works</h2>
+        <hr>
         <p>
           There are several existing software and papers that are related to our project, showed as follows.
         </p>
@@ -299,18 +290,6 @@
         <a href="#head-navbar">Back to top</a>
       </div>
 
-      <!-- <div class="jumbotron" id="References">
-        <h2>References</h2>
-        <p>
-          [1]. Middleton, Gareth. "Frequency Domain Pitch Correction." Connexions, December 17 (2003).<br>
-          [2]. Laroche, Jean, and Mark Dolson. "Improved phase vocoder time-scale modification of audio." Speech and Audio Processing, IEEE Transactions on 7.3 (1999): 323-332.<br>
-          [3]. Tyrangiel, Josh. "Auto-tune: Why pop music sounds perfect." Time Magazine (2009): 1877372-3.<br>
-          [4]. Bello, Juan Pablo, Giuliano Monti, and Mark B. Sandler. "Techniques for Automatic Music Transcription." ISMIR. 2000.<br>
-          [5]. Ellis, Daniel PW. "Beat tracking by dynamic programming." Journal of New Music Research 36.1 (2007): 51-60.
-        </p>
-
-        <a href="#head-navbar">Back to top</a>
-      </div> -->
       
     </div>
   	
